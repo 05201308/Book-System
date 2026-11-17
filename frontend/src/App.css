@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f9;
+  color: #222;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+/* ---------- navbar ---------- */
+.navbar {
+  background: #1f3a5f;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 12px 20px;
+}
+
+.logo {
+  font-size: 20px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.nav-links a {
+  color: #d6e2f3;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-links a.active {
+  background: #35598a;
+  color: white;
+}
+
+.nav-links a:hover {
+  background: #2c4c78;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* ---------- cards and forms ---------- */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  align-items: end;
+}
+
+.form-grid h2,
+.form-grid .message,
+.form-grid .hint {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.login-card {
+  max-width: 420px;
+  grid-template-columns: 1fr;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 9px;
+  border: 1px solid #b9c2d0;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #6fa0dc;
+}
+
+.hint {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  background: #2f6fbd;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: #255a9a;
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.btn.red {
+  background: #c0392b;
+}
+
+.btn.red:hover {
+  background: #a23024;
+}
+
+.btn.grey {
+  background: #7b8594;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ---------- messages ---------- */
+.message {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.message.error {
+  background: #fdeaea;
+  color: #a12020;
+}
+
+.message.success {
+  background: #e6f6ea;
+  color: #1d6b32;
+}
+
+/* ---------- tables ---------- */
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6e9ef;
+  font-size: 14px;
+}
+
+th {
+  background: #eaf0f8;
+}
+
+tr.low-stock {
+  background: #fff3d6;
+}
+
+tr.low-stock td:nth-child(5) {
+  color: #b34700;
+  font-weight: bold;
+}
+
+/* ---------- dashboard stats ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.stat {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.stat span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f3a5f;
+}
+
+.stat.warn span {
+  color: #b34700;
+}
+
+/* ---------- transaction tags ---------- */
+.tag {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.tag.add {
+  background: #e6f6ea;
+  color: #1d6b32;
+}
+
+.tag.borrow {
+  background: #e3ecfa;
+  color: #1f4f95;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
